@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "micro-server dev",
-    "build": "micro-server build"
+    "build": "micro-server build",
+    "previw": "sirv dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "micro-server": "file:../micro-server"
+    "micro-server": "file:../micro-server",
+    "sirv-cli": "^2.0.2"
   }
 }
