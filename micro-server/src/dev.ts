@@ -18,7 +18,6 @@ export const startDev = () => {
 			dev: true,
 			etag: true,
 			setHeaders(res, pathname) {
-				console.log("res", res, pathname);
 				if (/\.[tj]s$/.test(pathname)) {
 					res.setHeader("Content-Type", "application/javascript");
 				}
