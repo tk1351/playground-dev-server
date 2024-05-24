@@ -1,0 +1,15 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "micro-server dev",
+    "build": "micro-server build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "micro-server": "file:../micro-server"
+  }
+}
