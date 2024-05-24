@@ -1,15 +1,14 @@
-import cac from 'cac';
+import cac from "cac";
+import { startDev } from "./dev";
 
 const cli = cac();
 
-cli.command('dev')
-    .action(() => {
-        console.log('dev server start')
-    });
-cli.command('build')
-    .action(() => {
-        console.log('build start')
-    });
+cli.command("dev").action(() => {
+	startDev();
+});
+cli.command("build").action(() => {
+	console.log("build start");
+});
 
 cli.help();
 cli.parse();
