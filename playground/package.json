@@ -6,11 +6,16 @@
   "scripts": {
     "dev": "micro-server dev",
     "build": "micro-server build",
-    "previw": "sirv dist"
+    "previw": "sirv dist",
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src",
+    "annalyze": "biome check --apply ./src",
+    "biome:all": "npm run format && npm run lint && npm run annalyze"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@biomejs/biome": "1.7.3",
     "micro-server": "file:../micro-server",
     "sirv-cli": "^2.0.2"
   }

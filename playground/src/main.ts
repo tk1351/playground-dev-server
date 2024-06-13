@@ -1,6 +1,18 @@
-import { content } from './content'
+import { createElement } from "./createElement";
+import { render } from "./render";
 
-// biome-ignore lint/style/noNonNullAssertion: <explanation>
-const app = document.querySelector<HTMLDivElement>('#app')!
+const Yuzan = {
+	createElement,
+	render,
+};
 
-app.innerHTML = content
+const element = Yuzan.createElement(
+	"div",
+	{ id: "foo", },
+	Yuzan.createElement("a", { href: "https://github.com" }, "Github.com"),
+	Yuzan.createElement("p", null, "test"),
+);
+
+const container = document.querySelector("#root");
+
+if (container) Yuzan.render(element, container);

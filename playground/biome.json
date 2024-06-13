@@ -1,0 +1,3 @@
+{
+	"extends": ["../micro-server/biome.json"]
+}
